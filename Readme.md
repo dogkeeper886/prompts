@@ -220,3 +220,38 @@ pm.globals.set("messages", messages);
 pm.variables.set("messages_string", JSON.stringify(messages));
 
 ```
+
+## The messages list
+In the end, the messages list contain the chat history of the conversation.
+```json
+[
+    {
+        "role": "system",
+        "content": "Use the following step-by-step instructions to help user create a test case.\n1. Ask user to provide you with text in triple quotes. This text provides information on how to access the feature user wany to test.\n2. Ask user to provide you the test case is focus on what aspect.\n3. Create a test case according to the information user provided in step 1 and step 2. The test case should contain summary, steps and expect results."
+    },
+    {
+        "role": "user",
+        "content": "Help me create a test case."
+    },
+    {
+        "role": "assistant",
+        "content": "Sure, I can help you with that. Please provide me with the text in triple quotes that provides information on how to access the feature you want to test."
+    },
+    {
+        "role": "user",
+        "content": "\"\"\"1. On the navigation bar, click Venues. The Venues page is displayed.\n2. Select the Venue Name and click Edit. Alternatively, click Venue Name > Configure. Select the Wi-Fi Configuration tab. By default, the Radio tab is displayed.\n3. In the Radio tab, select the Client Admission Control sub-tab. The Client Admission Control sub-tab is displayed.\n4. Configure the following settings for the 2.4 GHz and 5 GHz bands:\n- Minimum client count\n- Maximum radio load\n- Minimum client throughput\n5. Click Save.\"\"\""
+    },
+    {
+        "role": "assistant",
+        "content": "Great! Now please let me know what aspect this test case is focusing on. For example, is it to verify the functionality of configuring settings for the 2.4 GHz and 5 GHz bands?"
+    },
+    {
+        "role": "user",
+        "content": "I want to check if the Maximum radio load 70% is exceed. There should not allow new client connect."
+    },
+    {
+        "role": "assistant",
+        "content": "Got it! Based on the information you provided, here's a test case for verifying if the maximum radio load of 70% is exceeded:\n\nTest Case:\nSummary: Verify that when the maximum radio load reaches 70%, new clients are not allowed to connect.\n\nSteps:\n1. Navigate to the Venues page by clicking on the \"Venues\" link in the navigation bar.\n2. Select the desired venue name and click on the \"Edit\" option. Alternatively, click on the venue name and then select \"Configure\".\n3. On the Wi-Fi Configuration tab, make sure the Radio tab is displayed.\n4. In the Radio tab, select the \"Client Admission Control\" sub-tab.\n5. Set the maximum radio load to 70%.\n6. Save the settings.\n7. Simulate a scenario where the radio load exceeds the maximum limit.\n8. Attempt to connect a new client to the network.\n9. Verify that the new client is not allowed to connect.\n\nExpected Results:\n- The new client should not be able to connect when the maximum radio load exceeds 70%.\n- An appropriate error message or indication should be displayed, indicating that the maximum radio load has been reached and new connections are not allowed.\n\nPlease let me know if there's anything else you'd like to add or modify in this test case."
+    }
+]
+```
