@@ -113,3 +113,59 @@ The steps to access the feature.
     }
 }
 ```
+
+## Provide specific functionality
+
+```
+I want to check if the Maximum radio load 70% is exceed. There should not allow new client connect.
+```
+
+### Response
+```json
+{
+    "id": "chatcmpl-7g5VxVTXw1AJh9ZFehnPhxb6Q7rZV",
+    "object": "chat.completion",
+    "created": 1690265329,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Got it! Based on the information you provided, here's a test case for verifying if the maximum radio load of 70% is exceeded:\n\nTest Case:\nSummary: Verify that when the maximum radio load reaches 70%, new clients are not allowed to connect.\n\nSteps:\n1. Navigate to the Venues page by clicking on the \"Venues\" link in the navigation bar.\n2. Select the desired venue name and click on the \"Edit\" option. Alternatively, click on the venue name and then select \"Configure\".\n3. On the Wi-Fi Configuration tab, make sure the Radio tab is displayed.\n4. In the Radio tab, select the \"Client Admission Control\" sub-tab.\n5. Set the maximum radio load to 70%.\n6. Save the settings.\n7. Simulate a scenario where the radio load exceeds the maximum limit.\n8. Attempt to connect a new client to the network.\n9. Verify that the new client is not allowed to connect.\n\nExpected Results:\n- The new client should not be able to connect when the maximum radio load exceeds 70%.\n- An appropriate error message or indication should be displayed, indicating that the maximum radio load has been reached and new connections are not allowed.\n\nPlease let me know if there's anything else you'd like to add or modify in this test case."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 339,
+        "completion_tokens": 269,
+        "total_tokens": 608
+    }
+}
+```
+
+### Response in markdown format
+```markdown
+Got it! Based on the information you provided, here's a test case for verifying if the maximum radio load of 70% is exceeded:
+
+Test Case:
+Summary: Verify that when the maximum radio load reaches 70%, new clients are not allowed to connect.
+
+Steps:
+1. Navigate to the Venues page by clicking on the \"Venues\" link in the navigation bar.
+2. Select the desired venue name and click on the \"Edit\" option. Alternatively, click on the venue name and then select \"Configure\".
+3. On the Wi-Fi Configuration tab, make sure the Radio tab is displayed.
+4. In the Radio tab, select the \"Client Admission Control\" sub-tab.
+5. Set the maximum radio load to 70%.
+6. Save the settings.
+7. Simulate a scenario where the radio load exceeds the maximum limit.
+8. Attempt to connect a new client to the network.
+9. Verify that the new client is not allowed to connect.
+
+Expected Results:
+- The new client should not be able to connect when the maximum radio load exceeds 70%.
+- An appropriate error message or indication should be displayed, indicating that the maximum radio load has been reached and new connections are not allowed.
+
+Please let me know if there's anything else you'd like to add or modify in this test case.
+```
