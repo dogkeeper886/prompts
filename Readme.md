@@ -169,3 +169,51 @@ Expected Results:
 
 Please let me know if there's anything else you'd like to add or modify in this test case.
 ```
+
+## Post-request script
+This script run after first create chat completion API. Save system prompt, user input and assistant response to a global variable. Maintain chat history in the conversation.
+
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Assign variables", function () {
+    const jsonData = pm.response.json();
+    const { object, choices } = jsonData;
+
+    if ( object !== "chat.completion") {
+        console.error("This is not a chat.completion object.");
+        return;
+    }
+
+    const { finish_reason, message } = choices[0];
+
+    if ( finish_reason !== "stop") {
+        console.error("The finish_reason is", finish_reason);
+        return;
+    }
+
+    const requestBody = JSON.parse(pm.request.body);
+    const messages = [ ...requestBody.messages, message];
+    console.log(JSON.stringify(messages, null, 4));
+    pm.globals.set("messages", messages);
+
+});
+```
+
+## Pre-request script
+This script run before send request. Retore chat history from global variable. Push user input into the messages list. Then update the global variable.
+
+```javascript
+let messages = pm.globals.get("messages");
+let message = {
+    role: "user",
+    content: "\"\"\"1. On the navigation bar, click Venues. The Venues page is displayed.\n2. Select the Venue Name and click Edit. Alternatively, click Venue Name > Configure. Select the Wi-Fi Configuration tab. By default, the Radio tab is displayed.\n3. In the Radio tab, select the Client Admission Control sub-tab. The Client Admission Control sub-tab is displayed.\n4. Configure the following settings for the 2.4 GHz and 5 GHz bands:\n- Minimum client count\n- Maximum radio load\n- Minimum client throughput\n5. Click Save.\"\"\""
+}
+messages.push(message);
+pm.globals.set("messages", messages);
+//console.log(JSON.stringify(messages_string, null, 4));
+pm.variables.set("messages_string", JSON.stringify(messages));
+
+```
