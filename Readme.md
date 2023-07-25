@@ -272,3 +272,12 @@ I want to validate the input field of a web GUI. The specific validation require
 
 ### Link for Test Case - Validation of Client Admission Control Input Fields
 <https://github.com/dogkeeper886/prompts/blob/main/Test%20Case%20-%20Validation%20of%20Client%20Admisssion%20Control%20Input%20Fields.md>
+
+## Example 3 - Check th limitation
+According to limitation in document, the client admission control can not be enabled when load balancing/band balancing is enabled.
+```
+I want to verify the limitation of client admission control. If client load balancing/band balancing is enabled, the client admission control can not be enabled
+```
+
+### Link for Test Case - Limitation of Client Admission Control with Enabled Load Balancing
+<https://github.com/dogkeeper886/prompts/blob/main/Test%20Case%20-%20Limitation%20of%20Client%20Admission%20Control%20with%20Enabled%20Load%20Balancing.md>
