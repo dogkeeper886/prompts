@@ -1,4 +1,3 @@
----
 Test Case - Maximum Radio Load Exceeding 70%
 ---
 ## Summary
