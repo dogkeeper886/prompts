@@ -1,5 +1,5 @@
-Test Case - Maximum Radio Load Exceeding 70%
----
+# Test Case - Maximum Radio Load Exceeding 70%
+
 ## Summary
 Verify that new clients are not able to connect when the Maximum radio load exceeds 70%.
 
