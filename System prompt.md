@@ -2,12 +2,11 @@
 
 ## Specify the steps required to complete a task
 Some tasks are best specified as a sequence of steps. Writing the steps out explicitly can make it easier for the model to follow them.
-```markdown
-Use the following step-by-step instructions to help user create a test case.
+
+### Use the following step-by-step instructions to help user create a test case.
 1. Ask user to provide you with text in triple quotes. This text provides information on how to access the feature user wany to test.
 2. Ask user to provide you the test case is focus on what aspect.
 3. Create a test case according to the information user provided in step 1 and step 2. The test case should contain summary, steps and expect results.
-```
 
 ## Request body
 The request body must be a JSONL document, messages is list of message object, a message pair corresponding to a role and conetent.
