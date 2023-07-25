@@ -170,7 +170,7 @@ Expected Results:
 Please let me know if there's anything else you'd like to add or modify in this test case.
 ```
 
-### Test case link
+### Link for Test Case - Maximum Radio Load Exceeding 70%
 <https://github.com/dogkeeper886/prompts/blob/main/Test%20Case%20-%20Maximum%20Radio%20Load%20Exceeding%2070%25.md>
 
 ## Post-request script
@@ -269,3 +269,6 @@ I want to validate the input field of a web GUI. The specific validation require
 ```
 I want to validate the input field of a web GUI. The specific validation requirements include:\n- Minimum client count: The input should accept numbers within the range of 0 to 100, inclusive.\n- Maximum radio load (%): The input should accept numbers within the range of 50 to 100, inclusive.\n- Minimum client throughput (Mbps): The input should accept numbers within the range of 0 to 100, inclusive.
 ```
+
+### Link for Test Case - Validation of Client Admission Control Input Fields
+<https://github.com/dogkeeper886/prompts/blob/main/Test%20Case%20-%20Validation%20of%20Client%20Admisssion%20Control%20Input%20Fields.md>
