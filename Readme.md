@@ -170,6 +170,9 @@ Expected Results:
 Please let me know if there's anything else you'd like to add or modify in this test case.
 ```
 
+### Test case link
+<https://github.com/dogkeeper886/prompts/blob/main/Test%20Case%20-%20Maximum%20Radio%20Load%20Exceeding%2070%25.md>
+
 ## Post-request script
 This script run after first create chat completion API. Save system prompt, user input and assistant response to a global variable. Maintain chat history in the conversation.
 
