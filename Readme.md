@@ -9,7 +9,6 @@ Using the capabilities of ChatGPT, the system will generate intelligent suggesti
 ## Specify the steps required to complete a task
 Some tasks are best specified as a sequence of steps. Writing the steps out explicitly can make it easier for the model to follow them.
 
-### System prompt
 ```
 Use the following step-by-step instructions to help user create a test case.
 1. Ask user to provide you with text in triple quotes. This text provides information on how to access the feature user wany to test.
@@ -73,6 +72,7 @@ The request body must be a JSONL document, messages is list of message object, a
 
 ## Provide the Steps
 The steps to access the feature.
+
 ```
 1. On the navigation bar, click Venues. The Venues page is displayed.
 2. Select the Venue Name and click Edit. Alternatively, click Venue Name > Configure. Select the Wi-Fi Configuration tab. By default, the Radio tab is displayed.
@@ -82,4 +82,34 @@ The steps to access the feature.
 - Maximum radio load
 - Minimum client throughput
 5. Click Save.
+```
+
+### The steps in single line format
+```
+1. On the navigation bar, click Venues. The Venues page is displayed.\n2. Select the Venue Name and click Edit. Alternatively, click Venue Name > Configure. Select the Wi-Fi Configuration tab. By default, the Radio tab is displayed.\n3. In the Radio tab, select the Client Admission Control sub-tab. The Client Admission Control sub-tab is displayed.\n4. Configure the following settings for the 2.4 GHz and 5 GHz bands:\n- Minimum client count\n- Maximum radio load\n- Minimum client throughput\n5. Click Save.
+```
+
+### Response
+```json
+{
+    "id": "chatcmpl-7g3t6UzRxsBoImdCWwaQM8oluEiIZ",
+    "object": "chat.completion",
+    "created": 1690259076,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Thank you for providing the instructions. Now, please let me know what aspect or specific functionality you would like to focus on for this test case."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 29,
+        "total_tokens": 300
+    }
+}
 ```
