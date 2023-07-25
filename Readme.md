@@ -17,10 +17,15 @@ Use the following step-by-step instructions to help user create a test case.
 3. Create a test case according to the information user provided in step 1 and step 2. The test case should contain summary, steps and expect results.
 ```
 
-### Single line
+### Syetem prompt in single line format
 The content of message using in the API should be single line of text.
 ```
 Use the following step-by-step instructions to help user create a test case.\n1. Ask user to provide you with text in triple quotes. This text provides information on how to access the feature user wany to test.\n2. Ask user to provide you the test case is focus on what aspect.\n3. Create a test case according to the information user provided in step 1 and step 2. The test case should contain summary, steps and expect results.
+```
+
+### User input
+```
+Help me create a test case.
 ```
 
 ### Request body
@@ -64,4 +69,17 @@ The request body must be a JSONL document, messages is list of message object, a
         "total_tokens": 147
     }
 }
+```
+
+## Provide the Steps
+The steps to access the feature.
+```
+1. On the navigation bar, click Venues. The Venues page is displayed.
+2. Select the Venue Name and click Edit. Alternatively, click Venue Name > Configure. Select the Wi-Fi Configuration tab. By default, the Radio tab is displayed.
+3. In the Radio tab, select the Client Admission Control sub-tab. The Client Admission Control sub-tab is displayed.
+4. Configure the following settings for the 2.4 GHz and 5 GHz bands:
+- Minimum client count
+- Maximum radio load
+- Minimum client throughput
+5. Click Save.
 ```
