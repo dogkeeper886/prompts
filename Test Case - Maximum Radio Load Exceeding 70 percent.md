@@ -1,10 +1,10 @@
 ---
 Test Case - Maximum Radio Load Exceeding 70%
 ---
-##Summary
+## Summary
 Verify that new clients are not able to connect when the Maximum radio load exceeds 70%.
 
-##Steps:
+## Steps:
 1. Navigate to the Venues page on the navigation bar.
 2. Select the desired Venue Name and click Edit or click on Venue Name followed by Configure.
 3. Select the Wi-Fi Configuration tab.
@@ -20,5 +20,5 @@ Verify that new clients are not able to connect when the Maximum radio load exce
 13. Verify that the network allows new clients to connect after the radio load is below 70%.
 14. Save the settings.
 
-##Expected Result:
+## Expected Result:
 - Clients can connect successfully when the radio load is below 70%, and new clients are not allowed to connect when the radio load exceeds 70%.
