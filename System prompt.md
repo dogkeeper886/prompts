@@ -26,6 +26,7 @@ The request body must be a JSONL document, messages is list of message object, a
     ]
 }
 ```
+
 ## Response
 ```json
 {
