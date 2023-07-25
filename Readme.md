@@ -255,3 +255,17 @@ In the end, the messages list contain the chat history of the conversation.
     }
 ]
 ```
+
+## Example 2 - Validate the input field of a web GUI
+Generate a test case focus on verify the web GUI input field validation.
+```markdown
+I want to validate the input field of a web GUI. The specific validation requirements include:
+- Minimum client count: The input should accept numbers within the range of 0 to 100, inclusive.
+- Maximum radio load (%): The input should accept numbers within the range of 50 to 100, inclusive.
+- Minimum client throughput (Mbps): The input should accept numbers within the range of 0 to 100, inclusive.
+```
+
+### Single line format
+```
+I want to validate the input field of a web GUI. The specific validation requirements include:\n- Minimum client count: The input should accept numbers within the range of 0 to 100, inclusive.\n- Maximum radio load (%): The input should accept numbers within the range of 50 to 100, inclusive.\n- Minimum client throughput (Mbps): The input should accept numbers within the range of 0 to 100, inclusive.
+```
