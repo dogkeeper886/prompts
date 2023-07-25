@@ -4,10 +4,10 @@
 Verify that when the maximum radio load reaches 70%, new clients are not allowed to connect.
 
 ## Steps:
-1. Navigate to the Venues page by clicking on the \"Venues\" link in the navigation bar.
-2. Select the desired venue name and click on the \"Edit\" option. Alternatively, click on the venue name and then select \"Configure\".
+1. Navigate to the Venues page by clicking on the "Venues" link in the navigation bar.
+2. Select the desired venue name and click on the "Edit" option. Alternatively, click on the venue name and then select "Configure".
 3. On the Wi-Fi Configuration tab, make sure the Radio tab is displayed.
-4. In the Radio tab, select the \"Client Admission Control\" sub-tab.
+4. In the Radio tab, select the "Client Admission Control" sub-tab.
 5. Set the maximum radio load to 70%.
 6. Save the settings.
 7. Simulate a scenario where the radio load exceeds the maximum limit.
